@@ -48,6 +48,8 @@ class Pagina {
     		$p .= "<link rel=\"stylesheet\" href=\"".$this->stylesheet."\" type=\"text/css\" media=\"all\">\n";
     	}
     	$p .= "</head>\n<body>";
+		$p .= "Demo ".$this->titel."\n";
+		$p .= "<hr>";
     	print "$p";
     }
     
