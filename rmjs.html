@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	body {
+		font-family: Courier;
+	}
+</style>
+</head>
+<body>
+<div style="margin-left: 200px; margin-top: 200px;">
+
+<table>
+<tr><td><input type="text"  id="getal1"></td></tr>
+<tr><td><input type="text"  id="getal2"></td></tr>
+<tr><td><span id="resultaat" >=</span></td></tr>
+<tr><td><button onclick="optellen()">+</button><button onclick="aftrekken()">-</button><button onclick="keer()">*</button><button onclick="deel()">/</button></td></tr>
+</table>
+
+</div>
+
+<script>
+function optellen() {
+	var g1 = document.getElementById("getal1").value;
+	var g2 = document.getElementById("getal2").value;
+	var uitkomst = Number(g1) + Number(g2);
+	document.getElementById("resultaat").innerHTML = "=" + uitkomst;
+
+}
+
+function aftrekken() {
+	var g1 = document.getElementById("getal1").value;
+	var g2 = document.getElementById("getal2").value;
+	var uitkomst = Number(g1) - Number(g2);
+	document.getElementById("resultaat").innerHTML = "=" + uitkomst;
+
+}
+
+function keer() {
+	var g1 = document.getElementById("getal1").value;
+	var g2 = document.getElementById("getal2").value;
+	var uitkomst = Number(g1) * Number(g2);
+	document.getElementById("resultaat").innerHTML = "=" + uitkomst;
+
+}
+
+function deel() {
+	var g1 = document.getElementById("getal1").value;
+	var g2 = document.getElementById("getal2").value;
+	if(g2!=0) {
+			var uitkomst = Number(g1) / Number(g2);
+	} else {
+			var uitkomst = "Delen door nul is flauwekul";
+	}
+	
+	document.getElementById("resultaat").innerHTML = "=" + uitkomst;
+
+}
+</script>
+
+</body>
+</html>
